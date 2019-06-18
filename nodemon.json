@@ -1,0 +1,6 @@
+{
+    "watch": [
+        "./gulpfile.js",
+        "./gulp"
+    ]
+}
