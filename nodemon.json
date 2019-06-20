@@ -1,6 +1,0 @@
-{
-    "watch": [
-        "./gulpfile.js",
-        "./z-gulp"
-    ]
-}

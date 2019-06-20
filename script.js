@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$(".fancy-img").fancybox(),$("[data-fancybox]").fancybox({autoFocus:!1,touch:!1}),$('a[href*="#"]').smoothscroll({duration:300,easing:"swing"}),$(".lazy").lazy({scrollDirection:"vertical",effect:"fadeIn",visibleOnly:!0,onError:function(o){console.log("error loading "+o.data("src"))}})});
