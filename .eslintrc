@@ -5,6 +5,9 @@
     "env": {
         "browser": true
     },
+    "globals": {
+        "$": true
+    },
     "rules": {
         "no-console": 0,
         "camelcase": 0,

@@ -15,12 +15,12 @@ task("html", () => src("./src/index.html")
 
 task("sass", () => src("./src/**/*.scss")
     // .pipe($.sourcemaps.init())
+    .pipe($.sass())
     .pipe($.purgecss({
         content: ["./build/index.html"]
         // rejected: true
     }))
-    .pipe($.sass())
-    // .pipe($.sourcemaps.write())
+    // // .pipe($.sourcemaps.write())
     .pipe($.autoprefixer())
     .pipe($.shorthand())
     .pipe($.concat("style.css"))
