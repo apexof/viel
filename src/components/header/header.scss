@@ -16,8 +16,6 @@
         margin-right: 100px;
         padding: 30px 40px 108px 0;
         max-width: 796px;
-        // background-color: #2529B5;
-        // clip-path: polygon(0 0, 100% 0, 82% 100%, 0% 100%);
         background:
             linear-gradient(to top left,transparent 50%,#2529B5 51%) right/18.1% 100% no-repeat,
             linear-gradient(#2529B5,#2529B5) left/82% 100% no-repeat;
@@ -42,10 +40,13 @@
         margin-right: 20px;
     }
     &__title{
-        margin: 14px 50px 9px 0;
+        margin: 14px 30px 9px 0;
         font-size: 21px;
         line-height: 31px;
         font-weight: normal;
+        br{
+            display: none;
+        }
     }
     &__cap {  
         display: flex;    
@@ -55,8 +56,12 @@
         &-contacts {
             display: flex;
             justify-content: space-between;
-            span + span {
+            a + a {
                 margin-left: 20px;
+            }
+            a{
+                color: #ffffff;
+                text-decoration: none;
             }
         }
     }
@@ -124,13 +129,18 @@
 
 @media (max-width: 900px) {
     .header {  
+        &__title {
+            br{
+                display: block;
+            }
+        }
         &__main-img {
             right: -740px;
         }
         &__container{
             background:
-            linear-gradient(to top left,transparent 50%,#2529B5 51%) right/28.1% 100% no-repeat,
-            linear-gradient(#2529B5,#2529B5) left/72% 100% no-repeat;
+                linear-gradient(to top left,transparent 50%,#2529B5 51%) right/28.1% 100% no-repeat,
+                linear-gradient(#2529B5,#2529B5) left/72% 100% no-repeat;
         }
         &__list{            
             &-el{
@@ -148,8 +158,113 @@
         }
     }
 }
-@media (max-width: 719px) {
-    .header{
+@media (max-width: 700px) {
+    .header {  
+        padding-left: 0;
+        &__bgc{
+            display: none;
+        }
+        &__container{
+            padding: 23px 15px 95px 0;
+            margin-right: 0;
+            margin-bottom: 226px;
+            background:
+                linear-gradient(to top left,transparent 50%,#2529B5 51%) bottom/100% 69px no-repeat,
+                linear-gradient(#2529B5,#2529B5) top/100% calc(100% - 69px) no-repeat;
+        }
+        &__main-img {
+            right: unset;
+            left: 0;
+            height: auto;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+            z-index: 0;
+        }
+        &__main-title{
+            margin-left: 15px;
+            font-size: 44px;
+            line-height: 52px;
+        }
+        &__title{
+            margin-left: 15px;
+            font-size: 21px;
+            line-height: 31px;
+            br{
+                display: none; 
+            }
+        }
+        &__cap {  
+            margin-bottom: 29px;
+            img{
+                margin-left: 15px;
+                width: 125px;
+            }
+            &-contacts {
+                font-size: 16px;
+                line-height: 26px;
+                flex-wrap: wrap;
+                max-width: 128px;
+                a{
+                    width: 100%;
+                }
+                a + a {
+                    margin-left: 0;
+                }
+            }
+        }
+        &__list{
+            margin-left: 15px;
+            &-el{
+                width: 100%;
+                margin-bottom: 0;
+                &:nth-child(2){
+                    margin-left: 0;
+                    margin-top: 32px;        
+           
+                }
+                &:nth-child(3){  
+                    margin-top: 32px;      
+                    img{
+                        margin-left: -14px;
+                    }                
+                }    
+            }
+        }
+        &__form{
+            margin-top: 56px;
+            &-title{    
+                margin-left: 15px;  
+            }
+            &-inputs {
+                flex-wrap: wrap;
+                input {
+                    width: calc(50% - 8px);
+                }
+                input:first-child{
+                    margin-left: 15px;                    
+                }
+                button{
+                    margin-left: 15px;
+                    width: 1000%;
+                    border: 0;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}
 
+@media (max-width: 570px) {
+    .header {         
+        &__main-img {
+            right: unset;
+            left: 0;
+            height: 295px;
+            width: auto;
+            top: unset;
+            bottom: 0;
+            z-index: 0;
+        }
     }
 }

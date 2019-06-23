@@ -3,6 +3,7 @@ const path = require("path");
 const del = require("del");
 const bSync = require("browser-sync");
 const $ = require("gulp-load-plugins")();
+const ghPages = require("gulp-gh-pages");
 
 const { src, task, parallel, series, watch } = gulp;
 require("./z-gulp/static");
@@ -38,8 +39,10 @@ task("watch", () => {
     watch("./build/img/*.{png,jpg}", series("sqip"));
 });
 
-task("gh-pages", () => src("./build/**/*").pipe($.ghPages()));
+// task("gh-pages", () => src("./build/**/*").pipe($.ghPages()));
 
+gulp.task("gh-pages", () => gulp.src("./build/**/*")
+    .pipe(ghPages()));
 task("clean", () => del("build/**/*"));
 
 task("build", series("html", "js", "sass", "static", "img"));

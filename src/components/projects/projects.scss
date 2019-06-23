@@ -1,3 +1,103 @@
 .projects{
-    padding: 56px 20px 30px;
+    padding: 56px 20px 65px;
+    background: #FAFAFA;
+    &__title {
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 52px;
+        text-align: center;
+        color: rgba(37, 41, 181, 0.95);
+        margin-bottom: 59px;
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        &-el-container{
+            padding: 0 18px;
+            width: 33.33%;
+            margin-bottom: 37px;
+            &:nth-child(10){
+                display: none;
+            }
+        }
+        &-el{
+            cursor: pointer;
+            padding-bottom: 18px;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 20px rgba(49, 49, 50, 0.1);
+            border-radius: 4px;    
+            max-height: 313px;    
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            height: -webkit-fill-available;
+            >img{
+                width: 100%;
+                height: 100%;
+            }
+            &-title{
+                margin: 22px 16px auto 20px;
+                font-family: Roboto;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 21px;
+                max-width: 286px;
+            }
+            &-count{
+                margin: 21px 16px 0 20px;
+                font-family: Roboto;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 21px;
+                color: #8E8E8E;
+                display: flex;
+                align-items: center;
+                span{
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+    button{
+        width: calc(33.33% - 18px);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .projects{
+        padding: 82px 29px 45px;
+        &__list{
+            &-el-container{
+                width: 50%;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .projects{
+        padding: 54px 15px 35px;
+        &__title{
+            margin-bottom: 29px;
+            font-size: 36px;
+            line-height: 42px;
+        }
+        &__list{
+            margin: 0;
+            &-el-container{
+                padding: 0;
+                width: 100%;
+                max-width: 324px;
+                margin-left: auto;      
+                margin-right: auto;      
+            }
+        }
+        button {
+            width: 100%;
+            max-width: 324px;
+        }
+    }
 }
