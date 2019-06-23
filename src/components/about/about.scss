@@ -1,0 +1,82 @@
+.about{
+    position: relative;
+    background-color: #2529B5;
+    color: #ffffff;
+    &__content{
+        margin-left: 140px;
+        position: relative;
+        z-index: 3;
+        padding: 50px 0 50px 210px;
+        background:
+            linear-gradient(to bottom right,transparent 50%,#2529B5 51%) left/130px 100% no-repeat,
+            linear-gradient(#2529B5,#2529B5) right/calc(100% - 130px) 100% no-repeat;
+    }
+    &__play {
+        position: absolute;
+        width: 145px;
+        height: 128px;
+        left: 0;
+        top: calc(50% - 64px);
+    }
+    &__title{
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 52px;
+    }
+    &__text{
+        font-family: Roboto;
+        font-size: 24px;
+        line-height: 35px;
+        margin: 32px 0 68px;
+        max-width: 700px;
+        font-weight: 300;
+    }
+    &__bgc{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        max-width: 844px;
+    }
+    &__desc{
+        display: flex;
+        justify-content: space-between;
+        max-width: 700px;
+        &-el{
+            position: relative;
+            width: 43%;
+            &-icon{
+                position: absolute;
+                left: -80px;
+                top: 3px;
+                img{
+                    width: 60px;
+                }
+            }
+            &-title{
+                margin-bottom: 22px;
+                font-family: Roboto;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 28px;
+            }
+            &:nth-child(2){
+                .about__desc-el-text{
+                    max-width: 230px;
+                }
+            }
+            &-text{
+                padding-bottom: 18px;
+                border-bottom: 6px solid #FF6819;
+                max-width: 288px;
+                font-family: Roboto;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}

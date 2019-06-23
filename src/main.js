@@ -31,6 +31,8 @@ $(document).ready(() => {
         $(".projects__list-el-container:nth-child(10)").toggle("medium");
     });
     $("#show-all-thanks").click(() => {
-        $(".review__thank-list2-container").toggle("medium");
+        if (document.documentElement.clientWidth < 901) {
+            $(".review__thank-list a:nth-child(n + 9)").toggle("medium");
+        }
     });
 });
