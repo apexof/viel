@@ -67,23 +67,47 @@
         margin: 0 auto 105px;
         display: block;
     }
-    &__thank-list{ 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;       
-        margin: 0 -11px 0;
-        a{
-            width: 11.111%;
-            padding: 0 11px;
-            margin-bottom: 60px;
+    &__thank-list{  
+        margin-bottom: 60px;
+        margin-left: -15px;
+        width: calc(100% + 30px);        
+        overflow: hidden;
+        position: relative; 
+        white-space: nowrap;    
+        a{         
+            width: 20%; 
+            padding: 0 15px;
+            display: inline-block;
             img {
-                width: 100%;
                 border-radius: 4px;
+                width: 100%;
             }
-            &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5){
-                width: 19%;
-                margin-bottom: 35px;
-            } 
+        }    
+ 
+        .slick-dots {
+            white-space: nowrap;
+            margin: 5px 0 0 0;
+            position: static;
+            li {
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background: #E6ECF1;
+                display: inline-block;
+                margin: 0;
+                &.slick-active {
+                    background: #EA4124;
+                }
+                button{
+                    height: unset;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+            li+li {
+                margin-left: 14px;
+            }
         }
     }
 
@@ -110,7 +134,7 @@
             flex-wrap: wrap;
             &-el{
                 margin: 0 auto;
-                max-width: 495px;
+                max-width: 521px;
                 width: 100%;
             }
             &-el + &-el{
@@ -121,32 +145,14 @@
             margin-top: 38px;
         }
         &__thank-list{   
-            justify-content: center;
-            max-width: 525px;
-            margin: 0 auto;
-            a{
-                width: 19.5%;
-                padding: 0 12px;
-                margin-bottom: 38px;
-                display: block;
-                img {
-                    width: 100%;
-                    border-radius: 4px;
-                }
-                &:nth-child(1),&:nth-child(2),&:nth-child(3){
-                    width: 33.33%;
-                    padding: 0 16px;
-                    margin-bottom: 30px;
-                } 
-                &:nth-child(4),&:nth-child(5){
-                    padding: 0 12px;
-                    margin-bottom: 38px;
-                    width: 19.5%;
-                }
-                &:nth-child(n + 9) {
-                    display: none;
-                }
-            }
+            margin: 0 auto 30px;
+            width: calc(100% + 16px); 
+            max-width: 511px;
+            a{         
+                width: 33.33%; 
+                padding: 0 8px;
+            }   
+
         }
     }
 }
@@ -161,6 +167,14 @@
                 &-desc {
                     padding: 10px;
                 }
+                &-video{
+                    .play-icon{
+                        width: 76px;
+                        height: 66px;
+                        top: calc(50% - 33px);
+                        left: calc(50% - 39px);
+                    }
+                }
             }
             &-el + &-el{
                 margin-top: 27px;
@@ -172,25 +186,27 @@
         &__dotted{
             margin-bottom: 59px;
         }
-
-        &__thank-list{ 
-            margin: 0 -9px;
-            max-width: unset;
-            a{
-                padding: 0 7px;
-                margin-bottom: 17px;
-                &:nth-child(1),&:nth-child(2),&:nth-child(3){   
-                    padding: 0 9px;
-                    margin-bottom: 17px;
-                }
-                &:nth-child(4),&:nth-child(5){
-                    padding: 0 7px;
-                    margin-bottom: 17px;
-                }
-            }
-        }
         &__title3{
             margin: 0 0 6px;
+        }
+    }
+}
+@media (max-width: 535px) {
+    .review{   
+        &__thank-list{   
+            margin: 0 0 17px -9px;
+            width: calc(100% + 18px); 
+            a{         
+                width: 33.33%; 
+                padding: 0 9px;
+            }   
+            .slick-dots {
+                margin: 5px 0 0 0;
+                li {
+                    width: 12px;
+                    height: 12px;                    
+                }
+            }
         }
     }
 }

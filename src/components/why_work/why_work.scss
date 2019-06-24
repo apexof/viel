@@ -1,0 +1,118 @@
+.why_work{
+    padding: 0 20px 0;
+    &__title{
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 52px;
+        text-align: center;
+        color: #2529B5;
+        text-align: center;
+        margin-bottom: 61px;
+
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        &-el{
+            width: 50%;
+            position: relative;
+            margin-bottom: 67px;
+            &:nth-child(odd){
+                padding-right: 56px;
+            }
+            &:last-child{
+                .why_work__list-el-img{
+                    margin-left: -18px;
+                }
+            }
+            &-img{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &-content{
+                max-width: 278px;
+                margin-left: 103px;
+            }
+            &-title{
+                font-family: Roboto;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;                
+                color: #2E3192;
+                margin-bottom: 13px;
+            }   
+            &-text{
+                font-family: Roboto;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 22px;
+                color: #000000;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .why_work{
+        padding-bottom: 0;
+        &__title{
+            margin-bottom: 59px;
+        }
+        &__list{
+            &-el{
+                &:nth-child(odd){
+                    padding-right: 0;
+                }
+                width: 100%;
+                margin: 0 auto 67px;
+                max-width: 431px;
+                &-content{
+                    max-width: 339px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .why_work{
+        padding: 0 15px 20px;
+        &__title{
+            margin-bottom: 25px;
+            font-size: 36px;
+            line-height: 42px;
+        }
+        &__list{
+            &-el{
+                &:nth-child(odd){
+                    padding-right: 0;
+                }
+                width: 100%;
+                margin: 0 auto 35px;
+                max-width: 431px;
+                &-img{
+                    position: static;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                &-content{
+                    max-width: 339px;  
+                    text-align: center; 
+                    margin: 0 auto;               
+                }
+                &-title{
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                &-text{
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

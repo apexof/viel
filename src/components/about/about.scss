@@ -4,6 +4,7 @@
     color: #ffffff;
     &__content{
         margin-left: 140px;
+        max-width: 910px;
         position: relative;
         z-index: 3;
         padding: 50px 0 50px 210px;
@@ -30,7 +31,6 @@
         font-size: 24px;
         line-height: 35px;
         margin: 32px 0 68px;
-        max-width: 700px;
         font-weight: 300;
     }
     &__bgc{
@@ -43,14 +43,13 @@
     &__desc{
         display: flex;
         justify-content: space-between;
-        max-width: 700px;
+        margin-left: -82px;
         &-el{
-            position: relative;
-            width: 43%;
+            display: flex;
+            width: 46%;
             &-icon{
-                position: absolute;
-                left: -80px;
-                top: 3px;
+                margin-right: 20px;
+                margin-top: 3px;
                 img{
                     width: 60px;
                 }
@@ -76,6 +75,97 @@
                 font-weight: 300;
                 font-size: 16px;
                 line-height: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1015px) {
+    .about{
+        padding-top: 44%;
+        &__content{
+            width: 100%;
+            max-width: unset;
+            margin: 0 0 0;
+            padding: 187px 20px 91px;
+            background:
+            linear-gradient(to bottom right,transparent 50%,#2529B5 51%) top/104% 177px no-repeat,
+            linear-gradient(#2529B5,#2529B5) bottom/100% calc(100% - 177px) no-repeat;
+   
+        }
+        &__bgc{
+            left: 0;
+            top: 0;
+            max-width: unset;
+            width: 100%;
+        }
+        &__play {
+            top: -180px;
+            left: calc(50% - 73px);
+        }
+        &__desc{  
+            margin-left: 0;    
+            justify-content: flex-start;    
+            &-el + &-el{
+                margin-left: 25px;
+            }     
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .about{
+        padding-top: 34%;
+        &__content{
+            padding: 120px 20px 46px;
+            background:
+            linear-gradient(to bottom right,transparent 50%,#2529B5 51%) top/104% 90px no-repeat,
+            linear-gradient(#2529B5,#2529B5) bottom/100% calc(100% - 90px) no-repeat;
+   
+        }
+        &__play {
+            top: -65px;
+            width: 65px;
+            height: 68px;
+            left: calc(50% - 33px);
+        }
+        &__title{
+            font-size: 36px;
+            line-height: 42px;
+        }
+        &__text{
+            font-size: 24px;
+            line-height: 35px;
+            margin-top: 21px;
+        }
+        &__bgc{
+          
+        }
+        &__desc{
+            flex-wrap: wrap;
+            &-el+&-el{
+                margin-top: 65px;
+                margin-left: 0;
+            }
+            &-el{
+                width: 100%;
+                &-icon{     
+                    margin-right: 10px;     
+                }
+                &-title{
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+                &:nth-child(2){
+                    .about__desc-el-text{
+                        max-width: 240px;
+                    }
+                }
+                &-text{
+                    font-size: 16px;
+                    line-height: 24px;
+                    max-width: 240px;
+                }
             }
         }
     }

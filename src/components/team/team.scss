@@ -1,5 +1,5 @@
 .team{
-    padding: 77px 0 0;
+    padding: 77px 60px 83px;
     &__title{
         font-family: Roboto;
         font-style: italic;
@@ -8,5 +8,98 @@
         line-height: 52px;
         text-align: center;
         color: rgba(37, 41, 181, 0.95);
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% + 140px);
+        margin: 55px -70px 0;
+        justify-content: center;
+        &-el{            
+            width: 33.33%;
+            padding: 0 70px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;   
+            margin-bottom: 71px;     
+            br{
+                display: none;
+            }   
+            &-img{
+                width: auto;
+                height: 170px;
+                margin: 0 auto;
+                display: block;
+            }
+            &-name{
+                margin: 20px auto 15px;
+                color: #000000;
+                max-width: 170px;
+                white-space: nowrap;
+            }
+            &-position{
+                margin: 0 auto;
+                color: #9b9b9b;
+                max-width: 170px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .team{
+        padding-bottom: 20px;
+        &__list{
+            width: calc(100% + 46px);
+            margin: 55px -23px 0;
+
+            &-el{
+                width: 33.33%;
+                padding: 0 23px;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .team{
+        padding: 25px 17px 15px;
+        &__list{
+            width: calc(100% + 14px);
+            margin: 27px -7px 0;
+            &-el{  
+                padding: 0 7px;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .team{
+        &__list{
+            &-el{
+                br{
+                    display: block;
+                }   
+                margin-bottom: 30px;
+                width: 50%;
+                &-img{
+                    height: 135px;
+                    width: 135px;
+                }
+                &-name{
+                    white-space: normal;
+                    max-width: 135px;  
+                    margin: 14px auto 10px;            
+                }
+                &-position{
+                    white-space: normal;
+                    max-width: 135px;                 
+                }
+            }
+        }
     }
 }

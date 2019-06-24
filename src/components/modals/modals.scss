@@ -1,5 +1,6 @@
 div.modal {
     display: none;
+    margin: 20px 0;
     overflow: hidden;
     width: 100%;
     max-width: 641px;
@@ -66,7 +67,7 @@ div.modal {
 }
 
 @media (max-width: 900px) {
-    div.modal {
+    div.modal {        
         max-width: 414px;
         padding-bottom: 31px;
         .modal__bgc-img {
@@ -74,6 +75,7 @@ div.modal {
             width: auto;
         }
         .content-scroll {
+            max-height: calc(70vh - 100px);
             padding: 22px 13px 0;
         }
         .modal__sign{
@@ -85,9 +87,9 @@ div.modal {
 @media (max-width: 600px) {
     div.modal {
         max-width: 288px;
-        padding-bottom: 0;
+        padding: 0 0 20px 0;
         .content-scroll {
-            padding: 22px 20px 20px;
+            padding: 22px 20px 0;
         }
     }
 }
