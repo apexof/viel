@@ -30,7 +30,7 @@ $(document).ready(() => {
     $("#show-all-projects").click(() => {
         $(".projects__list-el-container:nth-child(10)").toggle("medium");
     });
-    $(".process__arrow").mouseenter(() => {
+    $(".process__arrow>img").mouseenter(() => {
         $(".process__list-el:nth-child(n+2)").css("display", "flex");
         $(".process__arrow").hide();
     });
