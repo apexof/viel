@@ -15,7 +15,37 @@ div.modal {
     }
     .modal__bgc-img {
         width: 100%;
-        margin-bottom: -4px;
+        height: 195px;
+        &.one{
+            background: url('./img/previews/project1.svg') no-repeat center/cover;
+        }
+        &.two{
+            background: url('./img/previews/project2.svg') no-repeat center/cover;
+        }
+        &.three{
+            background: url('./img/previews/project3.svg') no-repeat center/cover;
+        }
+        &.four{
+            background: url('./img/previews/project4.svg') no-repeat center/cover;
+        }
+        &.five{
+            background: url('./img/previews/project5.svg') no-repeat center/cover;
+        }
+        &.six{
+            background: url('./img/previews/project6.svg') no-repeat center/cover;
+        }
+        &.seven{
+            background: url('./img/previews/project7.svg') no-repeat right/cover;
+        }
+        &.eight{
+            background: url('./img/previews/project8.svg') no-repeat right/cover;
+        }
+        &.nine{
+            background: url('./img/previews/project9.svg') no-repeat center/cover;
+        }
+        &.ten{
+            background: url('./img/previews/project10.svg') no-repeat center/cover;
+        }
     }
 
     .modal__sign{
@@ -38,7 +68,7 @@ div.modal {
 
     .content-scroll {
         background: #FFFFFF;
-        max-height: calc(100vh - 200px);
+        max-height: calc(100vh - 300px);
         overflow: auto;
         padding: 22px 21px 0;
         font-family: Roboto;
@@ -70,12 +100,7 @@ div.modal {
     div.modal {        
         max-width: 414px;
         padding-bottom: 31px;
-        .modal__bgc-img {
-            height: 195px;
-            width: auto;
-        }
-        .content-scroll {
-            max-height: calc(70vh - 100px);
+        .content-scroll {            
             padding: 22px 13px 0;
         }
         .modal__sign{
@@ -90,6 +115,11 @@ div.modal {
         padding: 0 0 20px 0;
         .content-scroll {
             padding: 22px 20px 0;
+        }   
+        .modal__bgc-img{
+            &.seven, &.eight{
+                background-position: center;
+            } 
         }
     }
 }

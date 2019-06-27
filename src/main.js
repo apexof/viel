@@ -1,4 +1,3 @@
-// $(document).ready(() => {
 $(".fancy-img").fancybox();
 
 $(".lazy").lazy({
@@ -9,7 +8,7 @@ $(".lazy").lazy({
         console.log("error loading " + element.data("src"));
     }
 });
-$(".modal .lazy").lazy({ visibleOnly: false });
+$(".modal .lazy").lazy({});
 
 $(window).on("resize orientationchange", () => {
     $(".process__list").slick("resize");
@@ -17,4 +16,3 @@ $(window).on("resize orientationchange", () => {
     $(".projects__list").slick("resize");
     $(".partners__list").slick("resize");
 });
-// });
