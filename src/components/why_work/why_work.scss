@@ -15,9 +15,9 @@
     &__list{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
         &-el{
-            width: 50%;
             position: relative;
             margin-bottom: 67px;
             &:nth-child(odd){
