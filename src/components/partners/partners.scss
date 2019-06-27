@@ -56,22 +56,23 @@
 }
 @media (max-width: 600px) {
     .partners{
-        padding: 27px 17px 30px;
+        padding: 27px 0 30px;
+        .slick-list{
+            padding: 0 !important;
+        }
         &__title{
             margin-bottom: 18px;
             font-size: 36px;
             line-height: 42px;
         }
         &__list{
-            margin: 0 -8px;
+            margin: 0 -20px;
             &-el{
-                padding: 0 8px;
-                margin-bottom: 14px;
+                padding: 0;
+                margin: 70px 20px 0;
+                transform: translateY(-50%);
                 &-wrap{
                     padding: 3px;
-                }
-                &-img{
-                    max-height: 40px;
                 }
             }
         }

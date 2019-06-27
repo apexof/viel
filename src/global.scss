@@ -3,6 +3,9 @@
 * {
     box-sizing: border-box;
 }
+* {
+    outline: 0;
+}
 
 html, body {
     width: 100%;
@@ -22,6 +25,18 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
+@-webkit-keyframes autofill {
+    to {
+        color: #fff;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
 button {
     border: 0;
     &:focus {
@@ -37,6 +52,7 @@ input{
     color: #ffffff;
     border: 0;
     outline: 0;
+    border-radius: 0;
     &::placeholder { 
         color: #ffffff;
     }
@@ -48,11 +64,9 @@ input{
     font-size: 16px;
     line-height: 21px; 
     height: 53px;
-    display: flex;
+    display: block;
     text-align: center;
     cursor: pointer;
-    justify-content: center;
-    align-items: center;
     border-radius: 1px;
     font-weight: bold;
     &:hover {

@@ -83,7 +83,7 @@
             }
             &:nth-child(3){        
                 img{
-                    margin: -12px 0;
+                    margin: -12px 0 -12px -14px;
                 }
                 .header__list-el-text{
                     width: 206px;
@@ -115,13 +115,18 @@
             align-items: flex-end;
             input, button {
                 border-bottom: 6px solid #fff;
+                height: 53px;
             }
             input:first-child{
+                margin-right: -2px;
                 padding-left: 5px;
                 background: url("./img/input-line.svg");
                 background-repeat: no-repeat;
                 background-position-y: center;
                 background-position-x: calc(100% - 14px);
+            }
+            input:nth-child(2){
+                margin-right: -2px;
             }
         }
     }
@@ -214,20 +219,17 @@
             }
         }
         &__list{
-            margin-left: 15px;
+            margin-right: 0;
             &-el{
-                width: 100%;
+                margin-left: 15px;
                 margin-bottom: 0;
-                &:nth-child(2){
-                    margin-left: 0;
-                    margin-top: 32px;        
-           
+                &:nth-child(2){ 
+                    margin-top: 32px; 
+                    margin-right: 0;
                 }
                 &:nth-child(3){  
-                    margin-top: 32px;      
-                    img{
-                        margin-left: -14px;
-                    }                
+                    margin-top: 32px;    
+                    margin-left: 15px;               
                 }    
             }
         }
@@ -265,6 +267,27 @@
             top: unset;
             bottom: 0;
             z-index: 0;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .header {         
+        &__list{
+            &-el{
+                width: 100%;
+                margin-bottom: 0;
+                &:nth-child(2){
+                    margin-left: 15px;      
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .header {         
+        &__main-img {
+            left: -110px;
         }
     }
 }

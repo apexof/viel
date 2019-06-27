@@ -1,0 +1,164 @@
+.ask-us{
+    padding: 0 20px;
+    font-family: Roboto;
+    background: #FAFAFA;    
+    position: relative;
+    &__left-contaier{
+        background: #2529B5;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .container{
+        padding: 26px 0 48px;
+        position: relative;
+        max-width: 474px;
+        background:
+            linear-gradient(to top left,transparent 50%,#2529B5 51%) right/85px 103% no-repeat,
+            linear-gradient(#2529B5,#2529B5) left/calc(100% - 85px) 100% no-repeat;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #FFFFFF;
+        margin-bottom: 35px;
+    }
+    &__form{
+        width: 100%;
+        max-width: 326px;
+        &-inputs{
+            display: flex;
+            width: 100%;
+            input {
+                border-bottom: 6px solid #fff;
+                display: inline-block;
+                margin-bottom: 27px;
+                width: 50%;
+                &:first-child{
+                    background: url("./img/input-line.svg");
+                    background-repeat: no-repeat;
+                    background-position-y: center;
+                    background-position-x: calc(100% - 14px);
+                }
+            }
+        }
+        textarea{   
+            resize: none;         
+            width: 100%;
+            height: 96px;
+            margin: 17px 0 10px;
+            border-radius: 1px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 21px;
+        }
+        .ask-us__textarea-label{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+        button{
+            width: 100%;
+            padding: 17px;
+        }
+    }
+    &__emblem{
+        position: absolute;
+        right: -215px;
+        bottom: 48px;
+    }
+}
+
+@media (max-width: 930px) {
+    .ask-us{
+        padding: 0;
+        &__left-contaier{
+            width: 0;
+        }
+        &__title{
+            margin-left: 50px;
+        }
+        .container{
+            position: static;
+            max-width: 530px;
+            margin-left: 0;
+        }
+        &__form{
+            padding: 0 50px;
+            max-width: 427px;
+        }
+        &__emblem{
+            right: 4%;
+        }
+    }
+}
+@media (max-width: 730px) {
+    .ask-us{
+        &__title{
+            margin-left: 20px;
+        }
+        .container{
+            max-width: 470px;
+        }
+        &__form{
+            padding: 0 20px;
+            max-width: 367px;
+        }
+        &__emblem{
+            right: 20px;
+        }
+    }
+}
+
+@media (max-width: 665px) {
+    .ask-us{
+        .container{
+            max-width: unset;
+            width: 100%;
+            background: #2529B5;
+            padding: 25px 20px;
+        }
+        &__title{
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+            max-width: 367px;
+        }
+        &__form{
+            margin: 0 auto;
+        }
+        &__emblem{
+            bottom: -67px;
+            width: 156px;
+            left: calc(50% - 78px);
+        }
+    }
+
+}
+@media (max-width: 400px) {
+    .ask-us{
+        &__title{
+            margin: 0 0 10px 0;
+        }
+        &__form{
+            padding: 0;
+            &-inputs{
+                flex-wrap: wrap;
+                width: 100%;
+                input {
+                    width: 100%;
+                    margin-bottom: 34px;
+                    &:first-child{
+                        margin-bottom: 10px;
+                        background: unset;    
+                    }
+                }
+            }
+        }
+    }
+}
+    

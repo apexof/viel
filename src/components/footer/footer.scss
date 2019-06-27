@@ -1,10 +1,26 @@
 .main-footer {
-    padding: 62px 25px 0;
+    padding: 69px 20px;
+    background: #FAFAFA;
+    &__sign{        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #000000;
+        a{
+            padding-bottom: 3px;
+            color: #3237cc;
+            text-decoration: none;
+            border-bottom: 1px solid #3237cc;
+        }
+    }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 665px) {
     .main-footer {
-
+        padding: 106px 20px 40px;        
     }
 }
 @media (max-width: 719px) {

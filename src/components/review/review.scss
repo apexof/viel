@@ -67,6 +67,9 @@
         margin: 0 auto 105px;
         display: block;
     }
+    .slick-dotted.slick-slider{
+        margin-bottom: 0;
+    }
     &__thank-list{  
         margin-bottom: 60px;
         margin-left: -15px;
@@ -83,10 +86,10 @@
                 width: 100%;
             }
         }    
- 
+
         .slick-dots {
             white-space: nowrap;
-            margin: 5px 0 0 0;
+            margin: 25px 0 0 0;
             position: static;
             li {
                 width: 16px;
@@ -109,21 +112,6 @@
                 margin-left: 14px;
             }
         }
-    }
-
-    &__title3{
-        cursor: pointer;
-        margin: 0 0 11px;
-        font-family: Roboto;
-        font-weight: 900;
-        font-size: 16px;
-        line-height: 19px;   
-        text-align: center;    
-    }
-    &__dotted2{
-        width: 144px;
-        margin: 0 auto;
-        display: block;
     }
 }
 
@@ -185,9 +173,6 @@
         }
         &__dotted{
             margin-bottom: 59px;
-        }
-        &__title3{
-            margin: 0 0 6px;
         }
     }
 }

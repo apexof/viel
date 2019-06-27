@@ -1,0 +1,186 @@
+.scripts{
+    font-family: Roboto;
+    background: #FAFAFA;
+    padding: 0 20px 132px;
+    &__title{
+        margin: 0 auto;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 52px;
+        text-align: center;        
+        color: rgba(37, 41, 181, 0.95);        
+    }
+    &__text{     
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+        margin: 28px auto 53px;
+        max-width: 586px;
+    }
+    .slick{
+        &-initialized .slick-slide{
+            display: flex;
+        }
+        &-prev, &-next{
+            height: 58px;
+            width: 33px;
+            right: unset;
+            left: calc(100% + 30px);
+            background-repeat: no-repeat;
+        }
+        &-prev{
+            background-image: url('./img/scripts-prev.svg'); 
+            z-index: 3;
+            top: 107px;
+            &:before {
+                content: "";
+            }
+        }
+        &-next{
+            background-image: url('./img/scripts-next.svg');        
+            top: 25px;
+            &:before {
+                content: ""; 
+            }
+        }
+    }
+
+    &__list{
+        display: flex;
+        max-width: 913px;
+        &-el{
+            display: flex;            
+            &:focus{
+                outline: 0;
+            }
+            &-img{                
+                max-width: 538px;
+                width: 100%;
+                height: 378px;
+                margin-right: 20px;
+                clip-path: polygon(0 0, 100% 0, 89% 100%, 0% 100%);
+                &.one{
+                    background-image: url('./img/previews/scripts1.svg') no-repeat top center/cover;
+                }
+                &.two{
+                    background-image: url('./img/previews/scripts2.svg') no-repeat top center/cover;
+                }
+                &.three{
+                    background-image: url('./img/previews/scripts3.svg') no-repeat top center/cover;
+                }
+                &.four{
+                    background-image: url('./img/previews/scripts4.svg') no-repeat top center/cover;
+                }
+                &.five{
+                    background-image: url('./img/previews/scripts5.svg') no-repeat top center/cover;
+                }
+                &.six{
+                    background-image: url('./img/previews/scripts6.svg') no-repeat top center/cover;
+                }
+            }
+            &-content{
+                width: 355px;
+                align-self: flex-start;
+            }
+            &-title{
+                font-weight: 500;
+                margin-bottom: 23px;
+                font-size: 18px;
+                line-height: 24px;
+                color: #2E3192;
+            }
+            &-text{
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+                color: #000000;
+            }
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .scripts{
+        padding: 0 87px 100px 0;
+        &__title, &__text{
+            padding-left: 87px;
+        }
+
+        &__list{
+            &-el{
+                &-img{   
+                    width: 50%;    
+                    max-width: unset;         
+                }
+                &-content{
+                    width: 50%;   
+                    max-width: unset;          
+                }
+            }
+        }
+    }
+}
+@media (max-width: 720px) {
+    .scripts{
+        &__list{
+            &-el{
+                &-img{      
+                    max-width: 311px;         
+                }
+                &-content{ 
+                    max-width: 297px;          
+                }
+            }
+        }
+    }
+}
+@media (max-width: 630px) {
+    .scripts{
+        padding: 0 15px 90px;
+        &__title{
+            font-size: 36px;
+            line-height: 42px;
+            max-width: 288px;
+            padding-left: 0;
+        }
+        &__text{
+            font-size: 18px;
+            padding-left: 0;
+            line-height: 25px;
+            margin: 22px auto;
+        }
+        .slick{
+            &-prev, &-next{
+                left: calc(100% - 53px);                
+            }
+            &-prev{
+                top: 330px;
+            }
+            &-next{
+                top: 250px;
+            }
+        }
+        &__list{
+            margin: 0 -15px; 
+            &-el{
+                flex-wrap: wrap;
+                &-img{ 
+                    max-width: unset; 
+                    width: calc(100% + 30px);      
+                    height: 192px;  
+                }
+                &-content{ 
+                    padding-left: 20px;
+                    max-width: unset;  
+                    width: calc(100% - 53px);        
+                }
+                &-title{
+                    margin: 32px auto 23px;
+                }
+            }
+        }
+    }
+}

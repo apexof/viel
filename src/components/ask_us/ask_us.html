@@ -1,0 +1,16 @@
+<div class="ask-us">
+    <div class="ask-us__left-contaier"></div>
+    <div class="container">
+        <h1 class="ask-us__title">Спросите нас</h1>
+        @@include('../../els/form-action.html', { "cx":"ask-us__form" })
+        <input name="form-type" type="hidden" value="Задать вопрос (footer)">
+        <div class="ask-us__form-inputs">
+            @@include('../../els/main-inputs.html')
+        </div>
+        <div class="ask-us__textarea-label">Вопрос</div>
+        <textarea required name="question"></textarea>
+        <button type="submit" class="btn">Отправить</button>
+        </form>
+        <img class="ask-us__emblem" src="./img/viel-emblem.svg" alt>
+    </div>
+</div>

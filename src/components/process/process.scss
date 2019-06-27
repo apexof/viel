@@ -9,7 +9,8 @@
         font-size: 44px;
         line-height: 52px;
         text-align: center;
-        margin-bottom: 83px;
+        margin: 0 auto 83px;
+        max-width: 377px;
     }
     &__arrow{
         width: 100%;
@@ -25,6 +26,9 @@
         }
         &-el{
             display: flex;
+            &:focus{
+                outline: 0;
+            }
             &:first-child{
                 flex-wrap: wrap;
             }
@@ -36,13 +40,16 @@
             }
             &:nth-child(odd){
                 .process__list-el-img{
-                    margin-left: 50px;
+                    margin-left: auto;
+                }
+                .process__list-el-content{
+                    margin-right: auto;                             
                 }
             }
             &:nth-child(even){
                 flex-direction: row-reverse;
-                .process__list-el-content{
-                    margin: 0 36px 0 0;
+                .process__list-el-content{   
+                    margin: 0 36px 0 auto;                           
                 }
                 .process__list-el-img{
                     margin-right: auto;
@@ -54,8 +61,7 @@
                 font-family: Roboto;
                 padding-bottom: 14px;
                 border-bottom: 6px solid #FF6819;
-            }
-            &-img{}
+            }            
             &-title{
                 font-style: italic;
                 font-weight: 500;
@@ -93,9 +99,9 @@
             &-el+&-el{
                 margin-top: 91px;
             }
-            &-el{
+            &-el{ 
                 &-content{
-                    max-width: 348px;
+                    max-width: 348px;                    
                 }
                 &:first-child{
                     flex-wrap: nowrap;
@@ -105,16 +111,6 @@
                 }
                 &:last-child{
                     margin-bottom: 68px;
-                }
-                &:nth-child(odd){
-                    .process__list-el-img{
-                        margin-left: 0;
-                    }
-                }
-                &:nth-child(even){
-                    .process__list-el-content{
-                        margin-left: 20px;        
-                    }
                 }
             }
         }
@@ -135,7 +131,7 @@
         .slick-prev, .slick-next{
             height: 35px;
             width: 35px;
-            top: 29%;
+            top: 165px;
             background-position: center;
             background-size: cover;
             &[aria-disabled="true"] {

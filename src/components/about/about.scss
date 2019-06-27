@@ -121,7 +121,6 @@
             background:
             linear-gradient(to bottom right,transparent 50%,#2529B5 51%) top/104% 90px no-repeat,
             linear-gradient(#2529B5,#2529B5) bottom/100% calc(100% - 90px) no-repeat;
-   
         }
         &__play {
             top: -65px;
@@ -134,12 +133,9 @@
             line-height: 42px;
         }
         &__text{
-            font-size: 24px;
-            line-height: 35px;
+            font-size: 18px;
+            line-height: 26px;
             margin-top: 21px;
-        }
-        &__bgc{
-          
         }
         &__desc{
             flex-wrap: wrap;
