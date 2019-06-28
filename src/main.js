@@ -1,14 +1,9 @@
 $(".fancy-img").fancybox();
 
-$(".lazy").lazy({
-    scrollDirection: "vertical",
-    effect: "fadeIn",
-    visibleOnly: true,
-    onError(element) {
-        console.log("error loading " + element.data("src"));
-    }
-});
-$(".modal .lazy").lazy({});
+const lazyLoadInstance = new LazyLoad({ elements_selector: ".lazy" });
+if (lazyLoadInstance) {
+    lazyLoadInstance.update();
+}
 
 $(window).on("resize orientationchange", () => {
     $(".process__list").slick("resize");
