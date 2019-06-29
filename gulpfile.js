@@ -29,14 +29,17 @@ task("watch", () => {
             delete $.cached.caches.js[path.resolve(filepath)];
         });
     watch("./static/**/*", series("static"));
-    watch("./src/**/*.{png,gif,jpg,svg}", series("minify"))
+    watch("./src/**/*.{png,gif,jpg,svg}", series("all-img"))
         .on("unlink", (filepath) => {
             const destFilePath = path.resolve("./build/img", path.basename(filepath));
             const destPreviewPath = path.resolve("./build/img/previews", path.parse(filepath).name + ".svg");
+            const destWebpPath = path.resolve("./build/img/webp", path.parse(filepath).name + ".webp");
             del.sync(destPreviewPath);
             del.sync(destFilePath);
+            del.sync(destWebpPath);
         });
-    watch("./build/img/*.{png,jpg}", series("sqip"));
+    watch("./src/**/*.{png,jpg}", series("sqip"));
+    watch("./src/**/*.{png,jpg}", series("webp"));
 });
 
 // task("gh-pages", () => src("./build/**/*").pipe($.ghPages()));
